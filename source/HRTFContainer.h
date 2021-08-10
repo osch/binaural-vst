@@ -22,7 +22,7 @@ public:
 	void updateHRIR(double azimuth, double elevation);
 	const HRIRBuffer& hrir() const;
 
-	void loadHrir(String filename);
+	void loadHrir(InputStream& istream);
 private:
 	static int getElvIndex(int elv);
 

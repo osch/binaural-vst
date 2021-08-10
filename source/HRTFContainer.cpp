@@ -65,10 +65,8 @@ const HRIRBuffer& HRTFContainer::hrir() const
 	return hrir_[hrirReadIndex];
 }
 
-void HRTFContainer::loadHrir(String filename)
+void HRTFContainer::loadHrir(InputStream& istream)
 {
-	FileInputStream istream(filename);
-	if (istream.openedOk())
 	{
 		std::vector<Vec2f> points;
 		int azimuths[] = {-90, -80, -65, -55, -45, -40, -35, -30, -25, -20,
@@ -95,8 +93,6 @@ void HRTFContainer::loadHrir(String filename)
 		triangulation_ = new Delaunay();
 		triangulation_->triangulate(points);
 	}
-	else
-		throw std::ios_base::failure("Failed to open HRIR file");
 }
 
 int HRTFContainer::getElvIndex(int elv)

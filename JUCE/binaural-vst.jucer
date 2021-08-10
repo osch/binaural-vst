@@ -26,6 +26,8 @@
             file="../source/AtomicAudioParameter.h"/>
       <FILE id="awkfBW" name="Crossover.cpp" compile="1" resource="0" file="../source/Crossover.cpp"/>
       <FILE id="g4mgpi" name="Crossover.h" compile="0" resource="0" file="../source/Crossover.h"/>
+      <FILE id="PsjOsv" name="hrir_kemar_bin.c" compile="1" resource="0"
+            file="../source/hrir_kemar_bin.c"/>
       <FILE id="lc0O54" name="HRIRFilter.cpp" compile="1" resource="0" file="../source/HRIRFilter.cpp"/>
       <FILE id="IlfLLb" name="HRIRFilter.h" compile="0" resource="0" file="../source/HRIRFilter.h"/>
       <FILE id="QvnZNy" name="HRTFContainer.cpp" compile="1" resource="0"

@@ -3,6 +3,9 @@
 #include "PluginEditor.h"
 #include "AtomicAudioParameter.h"
 
+extern "C" const size_t        binaural_hrir_kemar_bin_size;
+extern "C" const unsigned char binaural_hrir_kemar_bin_bytes[];
+
 
 HrtfBiAuralAudioProcessor::HrtfBiAuralAudioProcessor()
 	: bypassed(false)
@@ -16,10 +19,12 @@ HrtfBiAuralAudioProcessor::HrtfBiAuralAudioProcessor()
 	addParameter(gainDbParam);
 
 	// load HRIR
-	auto thisDir = File::getSpecialLocation(File::currentExecutableFile).getParentDirectory();
 	try
 	{
-		hrtfContainer.loadHrir(thisDir.getFullPathName() + "/hrir/kemar.bin");
+                MemoryInputStream hrirStream(binaural_hrir_kemar_bin_bytes, 
+                                             binaural_hrir_kemar_bin_size,
+                                             false);
+                hrtfContainer.loadHrir(hrirStream);
 		hrirLoaded = true;
 	}
 	catch (std::ios_base::failure&)
