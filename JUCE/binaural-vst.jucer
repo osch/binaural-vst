@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="pRKSbb" name="binaural-vst" projectType="audioplug" version="1.0.0"
-              bundleIdentifier="com.yourcompany.binauralvst" includeBinaryInAppConfig="1"
-              buildVST="1" buildVST3="0" buildAU="0" buildRTAS="0" buildAAX="0"
+              bundleIdentifier="com.github.twoz.binauralvst" includeBinaryInAppConfig="1"
+              buildVST="0" buildVST3="1" buildAU="0" buildRTAS="0" buildAAX="0"
               pluginName="BinAuralVST" pluginDesc="BinAuralVST" pluginManufacturer="TWoz"
-              pluginManufacturerCode="TWoz" pluginCode="BiAu" pluginChannelConfigs="{1,2},{2,2}"
+              pluginManufacturerCode="TWoz" pluginCode="Biau" pluginChannelConfigs="{1,2},{2,2}"
               pluginIsSynth="0" pluginWantsMidiIn="0" pluginProducesMidiOut="0"
               pluginSilenceInIsSilenceOut="0" pluginEditorRequiresKeys="0"
-              pluginAUExportPrefix="HrtfBiAuralAU" pluginRTASCategory="" aaxIdentifier="com.yourcompany.HrtfBiAural"
-              pluginAAXCategory="2" jucerVersion="5.4.7" pluginIsMidiEffectPlugin="0"
-              buildAUv3="0" pluginFormats="buildVST">
+              pluginAUExportPrefix="HrtfBiAuralAU" pluginRTASCategory="" aaxIdentifier="com.github.twoz.HrtfBiAural"
+              pluginAAXCategory="2" pluginIsMidiEffectPlugin="0" buildAUv3="0"
+              pluginFormats="buildLV2,buildVST3" projectLineFeed="&#10;" jucerFormatVersion="1"
+              buildStandalone="0" enableIAA="0" defines="JUCE_VST3_CAN_REPLACE_VST2=0"
+              companyWebsite="https://github.com/twoz/binaural-vst">
   <MAINGROUP id="ThT6AB" name="binaural-vst">
     <GROUP id="{692C8829-98B7-F217-6C73-4EA83692BB6A}" name="source">
       <GROUP id="{AEFA7BDD-9C72-E415-684B-6AE1771F871B}" name="delaunay">
